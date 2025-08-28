@@ -49,10 +49,40 @@ func test4() {
 	fmt.Println(num)
 }
 
+func test6() {
+	s := "PAYPALISHIRING"
+	res := funcs.Convert(s, 1)
+	fmt.Println(res)
+}
+
 func main() {
 	test3()
 
 	test4()
 	n := 5
 	fmt.Println(n / 2.0)
+	a := make([][]int, 5, 8)
+	for i := 0; i < len(a); i++ {
+
+	}
+	fmt.Println()
+
+	str := [][]string{{"a", "b", "c"}, {"d", "e", "f"}}
+	for i := 0; i < len(str); i++ {
+		for j := 0; j < len(str[i]); j++ {
+			fmt.Print(str[i][j], ",")
+		}
+	}
+
+	mode := 1
+	switch mode {
+	case 1:
+		fmt.Println("1")
+	case 2:
+		fmt.Println("2")
+	}
+	s := "abcde"
+	fmt.Println(string(s[0]))
+
+	test6()
 }

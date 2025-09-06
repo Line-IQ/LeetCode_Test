@@ -3,6 +3,7 @@ package main
 import (
 	"LeetCode/funcs"
 	"fmt"
+	"strconv"
 )
 
 func test2() {
@@ -55,6 +56,30 @@ func test6() {
 	fmt.Println(res)
 }
 
+func test7() {
+	x := -123
+	res := funcs.Reverse(x)
+	fmt.Println(res)
+}
+
+func test264() {
+	n := 4
+	num := funcs.ThUglyNumber(n)
+	fmt.Println(num)
+}
+
+func test8() {
+	r := -22313456348
+	a := funcs.Reverse(r)
+	fmt.Println(a)
+}
+
+func test9() {
+	s := "42"
+	res := funcs.MyAtoi(s)
+	fmt.Println(res)
+}
+
 func main() {
 	test3()
 
@@ -84,5 +109,23 @@ func main() {
 	s := "abcde"
 	fmt.Println(string(s[0]))
 
-	test6()
+	//test6()
+
+	b := -32
+	fmt.Println(strconv.Itoa(b)[0:2])
+
+	test7()
+
+	bb := make([]int, 0, 5)
+	bb = append(bb, 2, 3)
+	fmt.Println(bb)
+	fmt.Println(len(bb))
+
+	test264()
+
+	test8()
+
+	//c := "+"
+	//fmt.Println(strconv.Atoi(c))
+	test9()
 }

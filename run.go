@@ -128,4 +128,25 @@ func main() {
 	//c := "+"
 	//fmt.Println(strconv.Atoi(c))
 	test9()
+
+	aa := 1
+	n = -1
+	for aa != 0 {
+		aa /= 10
+		n++
+	}
+	fmt.Println(n)
+
+	ss := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
+	ss = []int{2, 3, 4, 5, 18, 17, 6}
+	res := funcs.MaxArea(ss)
+	fmt.Println(res)
+
+	nnn := 3
+	iii := 1
+	for ; nnn > 0; nnn-- {
+		iii *= 10
+	}
+	fmt.Println(iii)
+
 }

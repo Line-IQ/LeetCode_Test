@@ -149,4 +149,7 @@ func main() {
 	}
 	fmt.Println(iii)
 
+	sss := "abcd"
+	fmt.Println(sss[:1])
+
 }

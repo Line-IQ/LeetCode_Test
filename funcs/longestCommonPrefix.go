@@ -1,20 +1,21 @@
 package funcs
 
 func LongestCommonPrefix(strs []string) string {
-	n := len(strs)
-	res := strs[0]
-	minNum := len(res)
-	for i := 1; i < n; i++ {
-		num := match(res, strs[i])
-		if num < minNum {
-			res = res[:num]
-			minNum = num
-		}
-	}
-	if minNum == 0 {
+	if len(strs) == 0 {
 		return ""
 	}
-	return res[:minNum]
+	minNum := len(strs[0])
+	for i := 1; i < len(strs); i++ {
+		num := match(strs[0], strs[i])
+		if num < minNum {
+			minNum = num
+		}
+		if minNum == 0 {
+			return ""
+		}
+	}
+
+	return strs[0][:minNum]
 }
 
 func match(str1, str2 string) int {
